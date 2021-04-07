@@ -1,0 +1,46 @@
+.list-blog-div {
+  line-height: 2rem;
+  border-top: 1px solid #6b705c;
+  display: flex;
+  padding: 2rem ;
+  width: min(90%, 70.5rem);
+  color: #ac5c17;
+  background-color: beige;
+  flex-basis: 100%;
+}
+.left-blog-div {
+  display: flex;
+  flex-direction: column;
+  width:50rem;
+  height:10rem;
+  background-color: null;
+  text-align: left;
+  margin-right:20px
+}
+.image-div {
+  background-color: null;
+  display: flex;
+  flex-direction: column;
+}
+.blog-image {
+  max-width: 100px;
+}
+.delete-btn {
+  width: 50px;
+  border-radius: 10px 10px;
+  color: #ac5c17;
+  border: 1px solid #ac5c17;
+  background-color: transparent;
+  padding: 0.3rem;
+}
+.delete-btn:hover {
+  color: white;
+  border: 1px solid #ac5c17;
+  background-color: #ac5c17;
+}
+
+@media (max-width: 60em) {
+    .list-blog-div {
+        max-width: 500px;
+      }
+}
