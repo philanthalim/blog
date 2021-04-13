@@ -30,7 +30,7 @@ const EditBlog = () => {
   useEffect(() => {
     getPost();
   }, []);
-  console.log(title);
+  
   return (
     <div className="App">
       <div
