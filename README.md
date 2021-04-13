@@ -1,3 +1,10 @@
+# Blog Post App
+
+Full-stack MERN App that allows CRUD operations. User can create, edit and delete his/her blog post with the simple UI. 
+Backend deployed on Heroku. 
+
+https://adoring-bassi-164aac.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
