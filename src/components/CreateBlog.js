@@ -6,20 +6,21 @@ import { Link } from "react-router-dom";
 const Createblog = () => {
   const [title, setTitle] = useState("");
   const [story, setStory] = useState("");
-  let image="https://images.pexels.com/photos/3910065/pexels-photo-3910065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  const [image,setImage]=useState("https://images.pexels.com/photos/3910065/pexels-photo-3910065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
 
   const handleImage = (e) => {
-    image=e.target.files[0].name
     const file=e.target.files[0]
     const reader=new FileReader()
     reader.readAsDataURL(file)
     reader.onload=()=>{
-      image=reader.result
+      setImage(reader.result)
+      
     }
     reader.onerror=()=>{
       console.log('err')
     }
   };
+
   const submitBlog = () => {
     Axios.post("https://blogzspot.herokuapp.com/api/blogs", {
       title: title,
