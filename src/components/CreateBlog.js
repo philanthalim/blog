@@ -6,13 +6,25 @@ import { Link } from "react-router-dom";
 const Createblog = () => {
   const [title, setTitle] = useState("");
   const [story, setStory] = useState("");
-  const [image,setImage]=useState("https://images.pexels.com/photos/3910065/pexels-photo-3910065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+  let image="https://images.pexels.com/photos/3910065/pexels-photo-3910065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 
+  const handleImage = (e) => {
+    image=e.target.files[0].name
+    const file=e.target.files[0]
+    const reader=new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload=()=>{
+      image=reader.result
+    }
+    reader.onerror=()=>{
+      console.log('err')
+    }
+  };
   const submitBlog = () => {
     Axios.post("https://blogzspot.herokuapp.com/api/blogs", {
       title: title,
       story: story,
-      image:image
+      image: image,
     });
   };
   return (
@@ -41,7 +53,13 @@ const Createblog = () => {
             className="story-input"
             onChange={(e) => setStory(e.target.value)}
           ></textarea>
-          <input type="file" name="photo" accept='image/*' onChange={(e)=>setImage(e.target.files[0].name)} ></input>
+          <input
+          style={{marginTop:'20px',marginBottom:'20px'}}
+            type="file"
+            name="photo"
+            accept="image/*"
+            onChange={(e) => handleImage(e)}
+          ></input>
           <Link to="/blogs">
             <button className="post-button" onClick={submitBlog}>
               Create
