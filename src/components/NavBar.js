@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../logo.svg";
 
 const NavBar = () => {
   return (
     <div className="nav-bar-container">
       <div className="left-side">
-        <Link style={{ textDecoration: "none",color:'#d68c45',fontSize:'2rem' }} to="/">
+        <Link style={{ textDecoration: "none",color:'#5d2e46',fontSize:'2rem' }} to="/">
           <p>tumble</p>
         </Link>
       </div>
@@ -32,16 +31,7 @@ const NavBar = () => {
           >
             <p className="nav-link">Create</p>
           </Link>
-          <Link
-            style={{
-              color: "white",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
-            to="/blogs"
-          >
-            <p className="nav-link">Profile</p>
-          </Link>
+
         </div>
       </div>
     </div>

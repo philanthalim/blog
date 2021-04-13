@@ -8,9 +8,10 @@ const Createblog = () => {
   const [story, setStory] = useState("");
 
   const submitBlog = () => {
-    setStory("");
-    setTitle("");
-    Axios.post("http://localhost:5000/insert", { title: title, story: story });
+    Axios.post("https://blogzspot.herokuapp.com/api/blogs", {
+      title: title,
+      story: story,
+    });
   };
   return (
     <div className="App">
@@ -47,6 +48,7 @@ const Createblog = () => {
           </Link>
         </div>
       </div>
+      <div style={{ height: "60vh", backgroundColor: "#eed7c5" }}></div>
     </div>
   );
 };

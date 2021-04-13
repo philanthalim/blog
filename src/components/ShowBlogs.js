@@ -1,25 +1,32 @@
 import React from "react";
 import Axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const ShowBlogs = () => {
   const [blogList, setBlogList] = useState([]);
 
-  useEffect(() => {
-    Axios.get("http://localhost:5000/read").then((resp) =>
+  const fetchBlogs = () => {
+    Axios.get("https://blogzspot.herokuapp.com/api/blogs").then((resp) =>
       setBlogList(resp.data)
     );
-  });
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
   const deletePost = (id) => {
-    Axios.delete(`http://localhost:5000/delete/${id}`);
+    Axios.delete(`https://blogzspot.herokuapp.com/api/blogs/${id}`);
     let newBlogList = blogList.filter((blog) => blog._id !== id);
     setBlogList(newBlogList);
   };
-  //console.log(blogList, "list");
+
   return (
-    <div>
-      <div style={{ backgroundColor: "#eed7c5", color: "#ac5c17",width:'100%'}}>
+    <div style={{ backgroundColor: "#ad6a6c" }}>
+      <div
+        style={{ backgroundColor: "#eed7c5", color: "#ac5c17", width: "100%" }}
+      >
         <h2 style={{ padding: "1rem" }}>BLOGPOSTS</h2>
       </div>
       <div
@@ -28,27 +35,46 @@ const ShowBlogs = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          backgroundColor: "#dda15e",
-          padding:'1rem'
+          backgroundColor: "null",
+          padding: "1rem",
         }}
       >
         {blogList.map((blog) => (
           <div className="list-blog-div">
-            <div className="left-blog-div">
-              <h3 style={{fontSize:'1.5rem'}}>{blog.title}</h3>
-              <p style={{ overflow: "hidden", textOverflow: "ellipsis",fontSize:'1.2rem' }}>
-                {blog.story}
-              </p>
-              <p style={{fontSize:'0.9rem'}}>{blog.dateCreated.slice(0,15)}</p>
-              <button
-                className="delete-btn"
-                onClick={() => deletePost(blog._id)}
-              >
-                Delete
-              </button>
-            </div>
             <div className="image-div">
               <img className="blog-image" src={blog.image} alt="" />
+            </div>
+            <div className="right-blog-div">
+              <Link
+                style={{ textDecoration: "none", color: "brown" }}
+                to={`/view-blog/${blog._id}`}
+              >
+                <h3 style={{ fontSize: "1.5rem" }}>{blog.title}</h3>
+              </Link>
+              <p
+                style={{
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  fontSize: "1.2rem",
+                }}
+              >
+                {blog.story}...
+              </p>
+              <p style={{ fontSize: "0.9rem" }}>
+                {blog.dateCreated.slice(0, 15)}
+              </p>
+              <div>
+                {" "}
+                <button
+                  className="delete-btn"
+                  onClick={() => deletePost(blog._id)}
+                >
+                  Delete
+                </button>
+                <a href={`/edit-blog/${blog._id}`}>
+                  <button className="delete-btn"> Edit </button>
+                </a>
+              </div>
             </div>
           </div>
         ))}

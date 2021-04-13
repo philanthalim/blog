@@ -1,21 +1,23 @@
 .list-blog-div {
   line-height: 2rem;
-  border-top: 1px solid #6b705c;
+  border-top: 1px solid null;
   display: flex;
   padding: 2rem ;
   width: min(90%, 70.5rem);
   color: #ac5c17;
-  background-color: beige;
+  background-color: #ece2d0;
   flex-basis: 100%;
+  margin-top:20px
 }
-.left-blog-div {
+.right-blog-div {
   display: flex;
   flex-direction: column;
   width:50rem;
   height:10rem;
   background-color: null;
   text-align: left;
-  margin-right:20px
+  margin-left:20px;
+  
 }
 .image-div {
   background-color: null;
@@ -32,6 +34,7 @@
   border: 1px solid #ac5c17;
   background-color: transparent;
   padding: 0.3rem;
+  margin-right:8px
 }
 .delete-btn:hover {
   color: white;
