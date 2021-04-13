@@ -29,8 +29,8 @@ const EditBlog = () => {
 
   useEffect(() => {
     getPost();
-  }, );
-  console.log(blog)
+  },[] );
+
   return (
     <div className="App">
       <div
