@@ -2,23 +2,34 @@ import React from "react";
 import { useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import Resizer from "react-image-file-resizer";
 
 const Createblog = () => {
   const [title, setTitle] = useState("");
   const [story, setStory] = useState("");
-  const [image,setImage]=useState("https://images.pexels.com/photos/3910065/pexels-photo-3910065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+  const [image, setImage] = useState(
+    "https://images.pexels.com/photos/3910065/pexels-photo-3910065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  );
 
   const handleImage = (e) => {
-    const file=e.target.files[0]
-    const reader=new FileReader()
-    reader.readAsDataURL(file)
-    reader.onload=()=>{
-      setImage(reader.result)
-      
-    }
-    reader.onerror=()=>{
-      console.log('err')
-    }
+    const file = e.target.files[0];
+    resize(file);
+  };
+  const resize = (image1) => {
+    //console.log("d");
+    Resizer.imageFileResizer(
+      image1,
+      150,
+      150,
+      "JPEG",
+      100,
+      0,
+      (uri) => {
+        setImage(uri);
+        //console.log(image);
+      },
+      "base64"
+    );
   };
 
   const submitBlog = () => {
@@ -55,7 +66,7 @@ const Createblog = () => {
             onChange={(e) => setStory(e.target.value)}
           ></textarea>
           <input
-          style={{marginTop:'20px',marginBottom:'20px'}}
+            style={{ marginTop: "20px", marginBottom: "20px" }}
             type="file"
             name="photo"
             accept="image/*"
