@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color:#fefae0;
+  background-color:white;
   
 }
 .logo {
@@ -12,10 +12,10 @@
 .nav-link {
   font-size: 1rem;
   margin: 30px;
-  color: #ac5c17;
+  color: black;
 }
 .nav-link:hover {
-  color: #dda15e;
+  color: #7400b8;
 }
 .left-side {
   width: 30%;

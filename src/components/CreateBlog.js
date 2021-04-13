@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -16,14 +16,14 @@ const Createblog = () => {
   return (
     <div className="App">
       <div
-        style={{ color: "brown", padding: "20px", backgroundColor: "#e7bc91" }}
+        style={{ color: "null", padding: "20px", backgroundColor: "null" }}
       >
         <h1>Create a Blog Post</h1>
       </div>
       <div
         style={{
           display: "flex",
-          backgroundColor: "#eed7c5",
+          backgroundColor: "null",
           justifyContent: "center",
         }}
       >
@@ -48,7 +48,7 @@ const Createblog = () => {
           </Link>
         </div>
       </div>
-      <div style={{ height: "60vh", backgroundColor: "#eed7c5" }}></div>
+      <div style={{ height: "60vh", backgroundColor: "null" }}></div>
     </div>
   );
 };

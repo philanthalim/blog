@@ -4,10 +4,10 @@
   display: flex;
   padding: 2rem ;
   width: min(90%, 70.5rem);
-  color: #ac5c17;
-  background-color: #ece2d0;
+  color: black;
   flex-basis: 100%;
-  margin-top:20px
+  margin-top:20px;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
 }
 .right-blog-div {
   display: flex;
@@ -30,16 +30,16 @@
 .delete-btn {
   width: 50px;
   border-radius: 10px 10px;
-  color: #ac5c17;
-  border: 1px solid #ac5c17;
+  color: black;
+  border: 1px solid black;
   background-color: transparent;
   padding: 0.3rem;
   margin-right:8px
 }
 .delete-btn:hover {
-  color: white;
-  border: 1px solid #ac5c17;
-  background-color: #ac5c17;
+  color: #3c096c;
+  border: 1px solid #3c096c;
+  background-color: #dec9e9;
 }
 
 @media (max-width: 60em) {

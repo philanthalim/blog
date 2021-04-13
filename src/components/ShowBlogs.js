@@ -23,11 +23,11 @@ const ShowBlogs = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#ad6a6c" }}>
+    <div>
       <div
-        style={{ backgroundColor: "#eed7c5", color: "#ac5c17", width: "100%" }}
+        style={{ backgroundColor: "null", color: "black", width: "100%" }}
       >
-        <h2 style={{ padding: "1rem" }}>BLOGPOSTS</h2>
+        <h2 style={{ padding: "1rem" }}>BLOG POSTS</h2>
       </div>
       <div
         style={{
@@ -46,7 +46,7 @@ const ShowBlogs = () => {
             </div>
             <div className="right-blog-div">
               <Link
-                style={{ textDecoration: "none", color: "brown" }}
+                style={{ textDecoration: "none", color: "#7400b8" }}
                 to={`/view-blog/${blog._id}`}
               >
                 <h3 style={{ fontSize: "1.5rem" }}>{blog.title}</h3>

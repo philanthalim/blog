@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div className="nav-bar-container">
       <div className="left-side">
-        <Link style={{ textDecoration: "none",color:'#5d2e46',fontSize:'2rem' }} to="/">
+        <Link style={{ textDecoration: "none",color:'#3c096c',fontSize:'2rem' }} to="/">
           <p>tumble</p>
         </Link>
       </div>

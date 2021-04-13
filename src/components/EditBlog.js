@@ -34,14 +34,13 @@ const EditBlog = () => {
   return (
     <div className="App">
       <div
-        style={{ color: "brown", padding: "20px", backgroundColor: "#e7bc91" }}
+        style={{  padding: "20px"}}
       >
         <h1>Edit Post</h1>
       </div>
       <div
         style={{
           display: "flex",
-          backgroundColor: "#eed7c5",
           justifyContent: "center",
         }}
       >
@@ -65,7 +64,7 @@ const EditBlog = () => {
             </button>
           </Link>
         </div>
-        <div style={{ height: "90vh", backgroundColor: "#eed7c5" }}></div>
+        <div style={{ height: "90vh" }}></div>
       </div>
     </div>
   );
