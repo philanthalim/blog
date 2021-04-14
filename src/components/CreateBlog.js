@@ -3,8 +3,11 @@ import { useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 import Resizer from "react-image-file-resizer";
+import { addPost } from "../redux/actions/index";
+import { useDispatch } from "react-redux";
 
 const Createblog = () => {
+  const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [story, setStory] = useState("");
   const [image, setImage] = useState(
@@ -38,10 +41,18 @@ const Createblog = () => {
       story: story,
       image: image,
     });
+    dispatch(addPost({ title: title, story: story, image: image }));
   };
   return (
     <div className="App">
-      <div style={{ fontFamily: "Open Sans",color: "null", padding: "20px", backgroundColor: "null" }}>
+      <div
+        style={{
+          fontFamily: "Open Sans",
+          color: "null",
+          padding: "20px",
+          backgroundColor: "null",
+        }}
+      >
         <h1>Create a Blog Post</h1>
       </div>
       <div
@@ -60,14 +71,14 @@ const Createblog = () => {
           ></input>
           <p>DESCRIPTION</p>
           <textarea
-            style={{ height: "9rem",fontSize:'1.2rem' }}
+            style={{ height: "9rem", fontSize: "1.2rem" }}
             placeholder={"Enter details"}
             value={story}
             className="story-input"
             onChange={(e) => setStory(e.target.value)}
           ></textarea>
           <input
-            style={{ marginTop: "20px", marginBottom: "20px"}}
+            style={{ marginTop: "20px", marginBottom: "20px" }}
             type="file"
             name="photo"
             accept="image/*"

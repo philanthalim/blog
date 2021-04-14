@@ -3,24 +3,31 @@ import Axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loader from "react-loader-spinner";
+import { useSelector, useDispatch } from "react-redux";
+import { getPosts } from "../redux/actions/index";
 
 const ShowBlogs = () => {
   const [blogList, setBlogList] = useState([]);
   const [loading, setLoading] = useState(true);
+  //const blogList = useSelector((state) => state);
+  const dispatch = useDispatch();
+  //console.log(blogList, "list");
 
   const updateState = (resp) => {
+    //dispatch(getPosts(resp.data));
     setBlogList(resp.data);
     setLoading(false);
   };
 
-  const fetchBlogs = () => {
-    Axios.get("https://blogzspot.herokuapp.com/api/blogs").then((resp) =>
+  const fetchBlogs = async () => {
+    await Axios.get("https://blogzspot.herokuapp.com/api/blogs").then((resp) =>
       updateState(resp)
     );
   };
 
   useEffect(() => {
     fetchBlogs();
+    setTimeout(() => fetchBlogs(), 1000); //mimic real time data
   }, []);
 
   const deletePost = (id) => {
@@ -29,6 +36,7 @@ const ShowBlogs = () => {
     setBlogList(newBlogList);
   };
 
+  //console.log(blogList);
   return (
     <div>
       <div style={{ backgroundColor: "null", color: "black", width: "100%" }}>
@@ -67,9 +75,11 @@ const ShowBlogs = () => {
                 <p>{blog.story}</p>
               )}          */}
 
-              <p style={{ fontSize: "0.9rem" }}>
-                {blog.dateCreated.slice(0, 15)}
-              </p>
+              {blog.dateCreated ? (
+                <p>{blog.dateCreated.slice(0, 15)}</p>
+              ) : (
+                <></>
+              )}
               <div>
                 {" "}
                 <button
