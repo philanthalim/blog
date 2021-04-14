@@ -52,11 +52,11 @@ const ShowBlogs = () => {
               >
                 <h3 style={{ fontSize: "1.3rem" }}>{blog.title}</h3>
               </Link>
-              {blog.story.length > 10 ? (
+              {/*     {blog.story.length > 10 ? (
                 <p>{blog.story.slice(0, 80)}...</p>
               ) : (
                 <p>{blog.story}</p>
-              )}
+              )}          */}
 
               <p style={{ fontSize: "0.9rem" }}>
                 {blog.dateCreated.slice(0, 15)}

@@ -28,9 +28,9 @@ const ViewBlog = () => {
     >
       <div className="view-blog-div">
         <h2 style={{ fontSize: "1.8rem" }}>{blog.title}</h2>
-        <p>{blog.dateCreated}</p>
+        {blog.dateCreated ? <p>{blog.dateCreated.slice(0, 15)}</p> : <></>}
         <img src={blog.image} alt="" style={{ width: "15rem" }}></img>
-        <p style={{fontSize:'1.2rem'}}>{blog.story}</p>
+        <p style={{ fontSize: "1.2rem" }}>{blog.story}</p>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@
 @media (max-width: 40em) {
   .view-blog-div {
     width: 25rem;
-    margin:20px
+    margin:20px;
+    line-height: 2rem;
   }
 }
