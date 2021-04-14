@@ -50,7 +50,7 @@ const ShowBlogs = () => {
                 style={{ textDecoration: "none", color: "#7400b8" }}
                 to={`/view-blog/${blog._id}`}
               >
-                <h3 style={{ fontSize: "1.3rem" }}>{blog.title}</h3>
+                <h3 style={{ fontSize: "1.1rem" }}>{blog.title}</h3>
               </Link>
               {/*     {blog.story.length > 10 ? (
                 <p>{blog.story.slice(0, 80)}...</p>
