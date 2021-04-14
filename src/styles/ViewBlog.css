@@ -1,7 +1,13 @@
 .view-blog-div {
   line-height: 3rem;
-  background-color: null;
   margin-top: 2rem;
-  max-width: 700px;
   padding: 10px;
+  text-align: left;
+  margin-left:3rem
+}
+@media (max-width: 40em) {
+  .view-blog-div {
+    width: 25rem;
+    margin:20px
+  }
 }

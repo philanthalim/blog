@@ -11,9 +11,9 @@ const EditBlog = () => {
 
   const { id } = useParams();
   const getPost = async () => {
-    await Axios.get(`https://blogzspot.herokuapp.com/api/blogs/${id}`).then((resp) =>
-      updateDetails(resp)
-    );
+    await Axios.get(
+      `https://blogzspot.herokuapp.com/api/blogs/${id}`
+    ).then((resp) => updateDetails(resp));
   };
   const updateDetails = (resp) => {
     setBlog(resp.data);
@@ -29,13 +29,11 @@ const EditBlog = () => {
 
   useEffect(() => {
     getPost();
-  },[] );
+  }, []);
 
   return (
     <div className="App">
-      <div
-        style={{  padding: "20px"}}
-      >
+      <div style={{ padding: "20px" }}>
         <h1>Edit Post</h1>
       </div>
       <div
@@ -53,6 +51,7 @@ const EditBlog = () => {
           ></input>
           <p>DESCRIPTION</p>
           <textarea
+            style={{ height: "12rem" }}
             placeholder={"Enter details"}
             value={story}
             className="story-input"

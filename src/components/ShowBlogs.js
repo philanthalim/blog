@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const ShowBlogs = () => {
   const [blogList, setBlogList] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchBlogs = () => {
     Axios.get("https://blogzspot.herokuapp.com/api/blogs").then((resp) =>
@@ -14,6 +15,7 @@ const ShowBlogs = () => {
 
   useEffect(() => {
     fetchBlogs();
+    setLoading(true);
   }, []);
 
   const deletePost = (id) => {
@@ -24,11 +26,10 @@ const ShowBlogs = () => {
 
   return (
     <div>
-      <div
-        style={{ backgroundColor: "null", color: "black", width: "100%" }}
-      >
+      <div style={{ backgroundColor: "null", color: "black", width: "100%" }}>
         <h2 style={{ padding: "1rem" }}>BLOG POSTS</h2>
       </div>
+      {loading ? <></> : <p>loading</p>}
       <div
         style={{
           display: "flex",
@@ -49,17 +50,14 @@ const ShowBlogs = () => {
                 style={{ textDecoration: "none", color: "#7400b8" }}
                 to={`/view-blog/${blog._id}`}
               >
-                <h3 style={{ fontSize: "1.5rem" }}>{blog.title}</h3>
+                <h3 style={{ fontSize: "1.3rem" }}>{blog.title}</h3>
               </Link>
-              <p
-                style={{
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  fontSize: "1.2rem",
-                }}
-              >
-                {blog.story}...
-              </p>
+              {blog.story.length > 10 ? (
+                <p>{blog.story.slice(0, 80)}...</p>
+              ) : (
+                <p>{blog.story}</p>
+              )}
+
               <p style={{ fontSize: "0.9rem" }}>
                 {blog.dateCreated.slice(0, 15)}
               </p>

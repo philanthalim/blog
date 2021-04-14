@@ -10,8 +10,8 @@
 }
 .title-input {
   min-height: 3vh;
-  width: 30%;
-  font-size: 1rem;
+  width: 35%;
+  font-size: 1.1rem;
   border-radius: 5px 5px;
   border:0.5px solid grey;
   padding:0.5rem
@@ -26,8 +26,8 @@
 }
 
 .post-button {
-  margin: 10px;
-  min-height: 3vh;
+  margin-top: 20px;
+  min-height: 4vh;
   min-width: 20vw;
   font-size: 1rem;
   background-color: transparent;

@@ -27,10 +27,10 @@ const ViewBlog = () => {
       }}
     >
       <div className="view-blog-div">
-        <h2 style={{ fontSize: "2rem" }}>{blog.title}</h2>
+        <h2 style={{ fontSize: "1.8rem" }}>{blog.title}</h2>
         <p>{blog.dateCreated}</p>
-        <img src={blog.image} alt="" style={{ width: "500px" }}></img>
-        <p>{blog.story}</p>
+        <img src={blog.image} alt="" style={{ width: "15rem" }}></img>
+        <p style={{fontSize:'1.2rem'}}>{blog.story}</p>
       </div>
     </div>
   );

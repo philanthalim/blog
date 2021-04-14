@@ -60,13 +60,14 @@ const Createblog = () => {
           ></input>
           <p>DESCRIPTION</p>
           <textarea
+            style={{ height: "9rem",fontSize:'1.2rem' }}
             placeholder={"Enter details"}
             value={story}
             className="story-input"
             onChange={(e) => setStory(e.target.value)}
           ></textarea>
           <input
-            style={{ marginTop: "20px", marginBottom: "20px" }}
+            style={{ marginTop: "20px", marginBottom: "20px"}}
             type="file"
             name="photo"
             accept="image/*"
