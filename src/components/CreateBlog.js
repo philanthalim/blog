@@ -41,7 +41,7 @@ const Createblog = () => {
   };
   return (
     <div className="App">
-      <div style={{ color: "null", padding: "20px", backgroundColor: "null" }}>
+      <div style={{ fontFamily: "Open Sans",color: "null", padding: "20px", backgroundColor: "null" }}>
         <h1>Create a Blog Post</h1>
       </div>
       <div

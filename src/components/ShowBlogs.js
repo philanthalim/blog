@@ -27,7 +27,7 @@ const ShowBlogs = () => {
   return (
     <div>
       <div style={{ backgroundColor: "null", color: "black", width: "100%" }}>
-        <h2 style={{ padding: "1rem" }}>BLOG POSTS</h2>
+        <h1 className='header-text'>BLOG POSTS</h1>
       </div>
       {loading ? <></> : <p>loading</p>}
       <div

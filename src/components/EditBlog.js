@@ -33,7 +33,7 @@ const EditBlog = () => {
 
   return (
     <div className="App">
-      <div style={{ padding: "20px" }}>
+      <div style={{ fontFamily: "Open Sans", padding: "20px" }}>
         <h1>Edit Post</h1>
       </div>
       <div

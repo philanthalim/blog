@@ -6,7 +6,8 @@
   color: black;
   text-align: left;
   line-height: 30px;
-  padding:2rem
+  padding:2rem;
+  font-family: "Open Sans", sans-serif;
 }
 .title-input {
   min-height: 3vh;

@@ -30,6 +30,7 @@
   width: 70%;
   flex-direction: row;
   justify-content: flex-end;
+  font-family: "Open Sans", sans-serif;
 }
 .nav-link-div {
   display: flex;

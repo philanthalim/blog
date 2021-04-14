@@ -3,7 +3,8 @@
   margin-top: 2rem;
   padding: 10px;
   text-align: left;
-  margin-left:3rem
+  margin-left:3rem;
+  font-family: "Open Sans", sans-serif;
 }
 @media (max-width: 40em) {
   .view-blog-div {
