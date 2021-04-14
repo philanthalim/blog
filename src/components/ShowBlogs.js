@@ -34,7 +34,11 @@ const ShowBlogs = () => {
       <div style={{ backgroundColor: "null", color: "black", width: "100%" }}>
         <h1 className="header-text">BLOG POSTS</h1>
       </div>
-      {loading ? <Loader type="ThreeDots" color="purple" height={40} width={40}/> : <></>}
+      {loading ? (
+        <Loader type="Bars" color="purple" height={40} width={40} />
+      ) : (
+        <></>
+      )}
       <div
         style={{
           display: "flex",
