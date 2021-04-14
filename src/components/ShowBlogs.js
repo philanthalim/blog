@@ -2,20 +2,25 @@ import React from "react";
 import Axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Loader from "react-loader-spinner";
 
 const ShowBlogs = () => {
   const [blogList, setBlogList] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  const updateState = (resp) => {
+    setBlogList(resp.data);
+    setLoading(false);
+  };
 
   const fetchBlogs = () => {
     Axios.get("https://blogzspot.herokuapp.com/api/blogs").then((resp) =>
-      setBlogList(resp.data)
+      updateState(resp)
     );
   };
 
   useEffect(() => {
     fetchBlogs();
-    setLoading(true);
   }, []);
 
   const deletePost = (id) => {
@@ -27,9 +32,9 @@ const ShowBlogs = () => {
   return (
     <div>
       <div style={{ backgroundColor: "null", color: "black", width: "100%" }}>
-        <h1 className='header-text'>BLOG POSTS</h1>
+        <h1 className="header-text">BLOG POSTS</h1>
       </div>
-      {loading ? <></> : <p>loading</p>}
+      {loading ? <Loader type="ThreeDots" color="purple" height={40} width={40}/> : <></>}
       <div
         style={{
           display: "flex",
