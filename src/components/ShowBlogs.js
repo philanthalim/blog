@@ -27,7 +27,9 @@ const ShowBlogs = () => {
 
   useEffect(() => {
     fetchBlogs();
-    setTimeout(() => fetchBlogs(), 1000); //mimic real time data
+    console.log("on page");
+    const timer = setTimeout(() => fetchBlogs(), 1000);//mimic real time data
+    return () => clearTimeout(timer); 
   }, []);
 
   const deletePost = (id) => {
@@ -76,7 +78,9 @@ const ShowBlogs = () => {
               )}          */}
 
               {blog.dateCreated ? (
-                <p>{blog.dateCreated.slice(0, 15)}</p>
+                <p style={{ fontSize: "0.85rem" }}>
+                  {blog.dateCreated.slice(0, 15)}
+                </p>
               ) : (
                 <></>
               )}
