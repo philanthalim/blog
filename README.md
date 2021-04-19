@@ -1,9 +1,14 @@
 # Blog Post App
 
-Full-stack MERN App that allows CRUD operations. User can create, edit and delete his/her blog post with the simple UI. 
-Backend deployed on Heroku. 
+I used to blog when I was younger and I miss the process of jotting down my thoughts. I created this blog app for myself, with the intention of documenting my honest opinions and coding journey as i try to improve my skills. Blogging to document your life, is a wonderful way to reflect. Past joys and past mistakes, can all be learned from to some extent. So having somewhere to store those memories, can help you see how far you’ve come and how much you’ve learned.
+
+Frontend hosted with Netlify and backend deployed on Heroku. REST API built with node, express and mongoDB that allows CRUD operatons.
 
 https://adoring-bassi-164aac.netlify.app/
+
+
+https://user-images.githubusercontent.com/69285218/114997478-73ea7c80-9ed2-11eb-87ab-1c73410b4435.mov
+
 
 # Getting Started with Create React App
 
