@@ -3,18 +3,12 @@ import Axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loader from "react-loader-spinner";
-import { useSelector, useDispatch } from "react-redux";
-import { getPosts } from "../redux/actions/index";
 
 const ShowBlogs = () => {
   const [blogList, setBlogList] = useState([]);
   const [loading, setLoading] = useState(true);
-  //const blogList = useSelector((state) => state);
-  const dispatch = useDispatch();
-  //console.log(blogList, "list");
 
   const updateState = (resp) => {
-    //dispatch(getPosts(resp.data));
     setBlogList(resp.data);
     setLoading(false);
   };
@@ -27,9 +21,8 @@ const ShowBlogs = () => {
 
   useEffect(() => {
     fetchBlogs();
-    console.log("on page");
-    const timer = setTimeout(() => fetchBlogs(), 1000);//mimic real time data
-    return () => clearTimeout(timer); 
+    const timer = setTimeout(() => fetchBlogs(), 1000); //mimic real time data
+    return () => clearTimeout(timer);
   }, []);
 
   const deletePost = (id) => {
@@ -38,27 +31,19 @@ const ShowBlogs = () => {
     setBlogList(newBlogList);
   };
 
-  //console.log(blogList);
   return (
     <div>
       <div style={{ backgroundColor: "null", color: "black", width: "100%" }}>
-        <h1 className="header-text">BLOG POSTS</h1>
+        <h1 data-testid="header" className="header-text">
+          BLOG POSTS
+        </h1>
       </div>
       {loading ? (
         <Loader type="Bars" color="purple" height={40} width={40} />
       ) : (
         <></>
       )}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "null",
-          padding: "1rem",
-        }}
-      >
+      <div style={blogDiv}>
         {blogList.map((blog) => (
           <div className="list-blog-div">
             <div className="image-div">
@@ -71,12 +56,6 @@ const ShowBlogs = () => {
               >
                 <h3 style={{ fontSize: "1.1rem" }}>{blog.title}</h3>
               </Link>
-              {/*     {blog.story.length > 10 ? (
-                <p>{blog.story.slice(0, 80)}...</p>
-              ) : (
-                <p>{blog.story}</p>
-              )}          */}
-
               {blog.dateCreated ? (
                 <p style={{ fontSize: "0.85rem" }}>
                   {blog.dateCreated.slice(0, 15)}
@@ -85,8 +64,8 @@ const ShowBlogs = () => {
                 <></>
               )}
               <div>
-                {" "}
                 <button
+                  data-testid="del-btn"
                   className="delete-btn"
                   onClick={() => deletePost(blog._id)}
                 >
@@ -104,4 +83,11 @@ const ShowBlogs = () => {
   );
 };
 
+const blogDiv = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "1rem",
+};
 export default ShowBlogs;

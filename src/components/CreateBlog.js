@@ -19,7 +19,7 @@ const Createblog = () => {
     resize(file);
   };
   const resize = (image1) => {
-    //console.log("d");
+    
     Resizer.imageFileResizer(
       image1,
       150,
@@ -29,7 +29,7 @@ const Createblog = () => {
       0,
       (uri) => {
         setImage(uri);
-        //console.log(image);
+        
       },
       "base64"
     );
