@@ -7,7 +7,7 @@
 }
 @media (max-width: 40em) {
   .view-blog-div {
-    width: 25rem;
     line-height: 2rem;
+    margin: 0 30px 0 30px;
   }
 }
