@@ -1,5 +1,5 @@
 .view-blog-div {
-  line-height: 3rem;
+  line-height: 2rem;
   margin-top: 2rem;
   margin: 0 80px 0 80px;
   font-family: "Open Sans", sans-serif;
@@ -7,7 +7,8 @@
 }
 .story-style {
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  white-space: pre-line; /*line break for text area*/
 }
 @media (max-width: 40em) {
   .view-blog-div {
