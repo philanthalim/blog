@@ -3,6 +3,7 @@ import Axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loader from "react-loader-spinner";
+import Footer from "./Footer";
 
 const ShowBlogs = () => {
   const [blogList, setBlogList] = useState([]);
@@ -79,6 +80,7 @@ const ShowBlogs = () => {
           </div>
         ))}
       </div>
+    
     </div>
   );
 };

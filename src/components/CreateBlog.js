@@ -3,11 +3,12 @@ import { useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 import Resizer from "react-image-file-resizer";
-import { addPost } from "../redux/actions/index";
-import { useDispatch } from "react-redux";
+//import { addPost } from "../redux/actions/index";
+//import { useDispatch } from "react-redux";
+import Footer from "./Footer";
 
 const Createblog = () => {
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [story, setStory] = useState("");
   const [image, setImage] = useState(
@@ -19,7 +20,6 @@ const Createblog = () => {
     resize(file);
   };
   const resize = (image1) => {
-    
     Resizer.imageFileResizer(
       image1,
       150,
@@ -29,7 +29,6 @@ const Createblog = () => {
       0,
       (uri) => {
         setImage(uri);
-        
       },
       "base64"
     );
@@ -41,7 +40,7 @@ const Createblog = () => {
       story: story,
       image: image,
     });
-    dispatch(addPost({ title: title, story: story, image: image }));
+   // dispatch(addPost({ title: title, story: story, image: image }));
   };
   return (
     <div className="App">
@@ -91,7 +90,8 @@ const Createblog = () => {
           </Link>
         </div>
       </div>
-      <div style={{ height: "60vh", backgroundColor: "null" }}></div>
+      <div style={{ height: "30vh", backgroundColor: "null" }}></div>
+      <Footer />
     </div>
   );
 };

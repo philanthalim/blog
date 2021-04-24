@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const EditBlog = () => {
   const [blog, setBlog] = useState([]);
@@ -65,6 +66,7 @@ const EditBlog = () => {
         </div>
         <div style={{ height: "90vh" }}></div>
       </div>
+      <Footer />
     </div>
   );
 };
