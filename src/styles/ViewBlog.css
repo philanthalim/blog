@@ -5,9 +5,16 @@
   font-family: "Open Sans", sans-serif;
   background-color: null;
 }
+.story-style {
+  text-align: left;
+  font-size: 1.2rem;
+}
 @media (max-width: 40em) {
   .view-blog-div {
     line-height: 2rem;
-    margin: 0 15px 0 15px;
+    margin: 0 20px 0 20px;
+  }
+  .story-style {
+    font-size: 1rem;
   }
 }
