@@ -17,21 +17,11 @@ const ViewBlog = () => {
     getPost();
   }, []);
   return (
-    <div
-      style={{
-        backgroundColor: "null",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div className="view-blog-div">
-        <h2 style={{ fontSize: "1.6rem" }}>{blog.title}</h2>
-        {blog.dateCreated ? <p>{blog.dateCreated.slice(0, 15)}</p> : <></>}
-        <img src={blog.image} alt="" style={{ width: "15rem" }}></img>
-        <p style={{ fontSize: "1rem" }}>{blog.story}</p>
-      </div>
+    <div className="view-blog-div">
+      <h2 style={{ fontSize: "1.6rem" }}>{blog.title}</h2>
+      {blog.dateCreated ? <p>{blog.dateCreated.slice(0, 15)}</p> : <></>}
+      <img src={blog.image} alt="" style={{ width: "15rem" }}></img>
+      <p style={{ fontSize: "1rem",textAlign:'left' }}>{blog.story}</p>
     </div>
   );
 };

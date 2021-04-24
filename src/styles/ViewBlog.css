@@ -1,15 +1,13 @@
 .view-blog-div {
   line-height: 3rem;
   margin-top: 2rem;
-  padding: 10px;
-  text-align: left;
-  margin-left:3rem;
+  margin: 0 40px 0 40px;
   font-family: "Open Sans", sans-serif;
+  background-color: null;
 }
 @media (max-width: 40em) {
   .view-blog-div {
     width: 25rem;
-    margin:20px;
     line-height: 2rem;
   }
 }
