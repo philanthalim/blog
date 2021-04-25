@@ -35,10 +35,10 @@ const ViewBlog = () => {
       <div className="view-blog-div">
         <h2 style={{ fontSize: "1.6rem" }}>{blog.title}</h2>
         {blog.dateCreated ? <p>{blog.dateCreated.slice(0, 15)}</p> : <></>}
-        <img src={blog.image} alt="" style={{ width: "15rem" }}></img>
+        <img className="view-blog-image" src={blog.image} alt=""></img>
         <p className="story-style">{blog.story}</p>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
