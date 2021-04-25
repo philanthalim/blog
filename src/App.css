@@ -1,9 +1,14 @@
 .App {
   text-align: center;
-  min-height: 100vh;
+  
+}
+html {
+  height: 100%;
+}
+body{
+  min-height: 100%;
 }
 * {
   margin: 0;
   padding: 0;
 }
-

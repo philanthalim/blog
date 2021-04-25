@@ -38,6 +38,7 @@ const ViewBlog = () => {
         <img src={blog.image} alt="" style={{ width: "15rem" }}></img>
         <p className="story-style">{blog.story}</p>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -34,7 +34,7 @@ const ShowBlogs = () => {
 
   return (
     <div>
-      <div style={{ backgroundColor: "null", color: "black", width: "100%" }}>
+      <div style={{ width: "100%" }}>
         <h1 data-testid="header" className="header-text">
           BLOG POSTS
         </h1>
@@ -80,7 +80,7 @@ const ShowBlogs = () => {
           </div>
         ))}
       </div>
-    
+      <Footer />
     </div>
   );
 };
@@ -91,5 +91,6 @@ const blogDiv = {
   justifyContent: "center",
   alignItems: "center",
   padding: "1rem",
+  minHeight: "100vh",
 };
 export default ShowBlogs;

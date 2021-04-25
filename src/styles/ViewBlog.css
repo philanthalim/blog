@@ -5,6 +5,7 @@
   font-family: "Open Sans", sans-serif;
   background-color: null;
   margin-bottom: 80px;
+  min-height: 100vh;
 }
 .story-style {
   text-align: left;

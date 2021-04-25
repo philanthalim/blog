@@ -9,7 +9,6 @@ const Footer = () => {
         alignItems: "center",
         justifyContent: "center",
         display: "flex",
-       
         bottom:'0px',
         width:'100%'
       }}
