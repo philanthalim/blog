@@ -22,8 +22,8 @@ const Createblog = () => {
   const resize = (image1) => {
     Resizer.imageFileResizer(
       image1,
-      150,
-      150,
+      400,
+      400,
       "JPEG",
       100,
       0,
