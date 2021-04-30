@@ -36,7 +36,7 @@ const ShowBlogs = () => {
     <div>
       <div style={{ width: "100%" }}>
         <h1 data-testid="header" className="header-text">
-          BLOG POSTS
+          POSTS
         </h1>
       </div>
       {loading ? (

@@ -6,7 +6,7 @@ const NavBar = () => {
     <div className="nav-bar-container">
       <div className="left-side">
         <Link style={{ textDecoration: "none",color:'#3c096c',fontSize:'2rem' }} to="/">
-          <p>tumble</p>
+          <p>Me</p>
         </Link>
       </div>
       <div className="right-side">
