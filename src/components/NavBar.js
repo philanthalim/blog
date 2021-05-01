@@ -4,13 +4,17 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="nav-bar-container">
-      <div className="left-side">
-        <Link style={{ textDecoration: "none",color:'#3c096c',fontSize:'2rem' }} to="/">
-          <p>Me</p>
-        </Link>
-      </div>
+      <div className="left-side"></div>
       <div className="right-side">
         <div className="nav-link-div">
+          <Link
+            style={{fontWeight: "bold",
+              textDecoration: "none",
+            }}
+            to="/"
+          >
+            <p className="nav-link">Me</p>
+          </Link>
           <Link
             style={{
               color: "white",
@@ -31,7 +35,6 @@ const NavBar = () => {
           >
             <p className="nav-link">Create</p>
           </Link>
-
         </div>
       </div>
     </div>

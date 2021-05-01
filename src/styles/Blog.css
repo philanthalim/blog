@@ -1,12 +1,12 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  width:600px;
+  width: 600px;
   min-height: 33vh;
   color: black;
   text-align: left;
   line-height: 30px;
-  padding:2rem;
+  padding: 2rem;
   font-family: "Open Sans", sans-serif;
 }
 .title-input {
@@ -14,16 +14,16 @@
   width: 35%;
   font-size: 1.1rem;
   border-radius: 5px 5px;
-  border:0.5px solid grey;
-  padding:0.5rem
+  border: 0.5px solid grey;
+  padding: 0.5rem;
 }
 .story-input {
   width: 98%;
   min-height: 10vh;
   font-size: 1.3rem;
   border-radius: 5px 5px;
-  border:0.5px solid grey;
-  padding:0.5rem
+  border: 0.5px solid grey;
+  padding: 0.5rem;
 }
 
 .post-button {
@@ -32,15 +32,30 @@
   min-width: 20vw;
   font-size: 1rem;
   background-color: transparent;
-  color:#7400b8;
+  color: #7400b8;
   border: 1px solid #7400b8;
   cursor: pointer;
-  border-radius:15px 15px
+  border-radius: 15px 15px;
 }
 .post-button:hover {
   background-color: #dec9e9;
   cursor: pointer;
-
+}
+.about-container {
+  min-height: 80vh;
+  padding: 50px;
+  text-align: left;
+  line-height: 40px;
+  font-size: 1.2rem;
+}
+@media (max-width: 50em) {
+  .about-container {
+    min-height: 80vh;
+    padding: 30px;
+    text-align: left;
+    line-height: 25px;
+    font-size: 1rem;
+  }
 }
 label {
   margin: 20px;

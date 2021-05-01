@@ -34,8 +34,6 @@ const Createblog = () => {
     );
   };
 
-  //console.log(image, "image");
-
   const submitBlog = () => {
     Axios.post("https://blogzspot.herokuapp.com/api/blogs", {
       title: title,
