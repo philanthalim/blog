@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -7,34 +7,28 @@ const NavBar = () => {
       <div className="left-side"></div>
       <div className="right-side">
         <div className="nav-link-div">
-          <Link
-            style={{fontWeight: "bold",
-              textDecoration: "none",
-            }}
+          <NavLink
+            className="nav-link"
+            exact
+            activeStyle={{ fontWeight: "bold", color: "black" }}
             to="/"
           >
-            <p className="nav-link">Me</p>
-          </Link>
-          <Link
-            style={{
-              color: "white",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
+            Me
+          </NavLink>
+          <NavLink className="nav-link"
+            exact 
+            activeStyle={{ fontWeight: "bold", color: "black" }}
             to="/blogs"
           >
-            <p className="nav-link">Blogs</p>
-          </Link>
-          <Link
-            style={{
-              color: "white",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
+            Blogs
+          </NavLink>
+          <NavLink className="nav-link"
+            exact
+            activeStyle={{ fontWeight: "bold", color: "black" }}
             to="/new-blog"
           >
-            <p className="nav-link">Create</p>
-          </Link>
+           Create
+          </NavLink>
         </div>
       </div>
     </div>

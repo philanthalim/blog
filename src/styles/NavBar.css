@@ -2,8 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color:white;
-  
+  background-color: white;
 }
 .logo {
   width: clamp(1rem, 8vh, 15rem);
@@ -12,11 +11,9 @@
 .nav-link {
   font-size: 1rem;
   margin: 30px;
-  color: black;
+ 
 }
-.nav-link:hover {
-  color: #7400b8;
-}
+
 .left-side {
   width: 30%;
   background-color: null;
@@ -36,7 +33,10 @@
   display: flex;
   flex-direction: row;
 }
-Link{
+.underline {
+  border-bottom-width: 20px;
+}
+Link {
   text-decoration: none;
 }
 @media (max-width: 40em) {
