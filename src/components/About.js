@@ -10,7 +10,7 @@ const About = () => {
           Statistics Graduate at Nanyang Technological University, Singapore
         </p>
         <p className="about-desc" style={{ marginTop: "2rem" }}>
-          I build <span style={{ color: "purple" }}>projects</span> for fun in
+          I build <a href='https://github.com/philanthalim' target='_blank' style={{ color: "purple",textDecoration:'none' }}>projects</a> for fun in
           my free time, surrounding topics of my interest.
         </p>
         <p className="about-desc" style={{ marginTop: "2rem" }}>
