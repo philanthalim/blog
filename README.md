@@ -4,7 +4,6 @@ I created this blog app for myself, with the intention of documenting my honest 
 
 https://philantha.netlify.app/
 
-https://user-images.githubusercontent.com/69285218/114997478-73ea7c80-9ed2-11eb-87ab-1c73410b4435.mov
 
 # Tech Stacks
 
